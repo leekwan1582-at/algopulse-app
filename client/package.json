@@ -1,0 +1,42 @@
+{
+  "name": "client",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:run": "vitest run"
+  },
+  "dependencies": {
+    "axios": "^1.21.1",
+    "bootstrap": "^5.3.9",
+    "bootstrap-icons": "^1.13.2",
+    "formik": "^2.4.9",
+    "jotai": "^3.0.2",
+    "prop-types": "^15.8.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "sweetalert2": "^11.26.26",
+    "wouter": "^3.13.0",
+    "yup": "^1.7.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@testing-library/jest-dom": "^8.0.0",
+    "@testing-library/react": "^16.3.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "eslint": "^10.15.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.8",
+    "globals": "^17.14.0",
+    "jsdom": "^31.0.1",
+    "vite": "^8.4.0",
+    "vitest": "^5.1.2"
+  }
+}
