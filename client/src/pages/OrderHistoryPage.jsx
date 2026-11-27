@@ -140,7 +140,7 @@ export default function OrderHistoryPage() {
       <div className="card shadow-sm">
         <div className="table-responsive">
           <table className="table table-hover mb-0">
-            <thead className="table-light">
+            <thead>
               <tr>
                 <th>Order ID</th>
                 <th>Strategy Name</th>
@@ -180,7 +180,7 @@ export default function OrderHistoryPage() {
             </tbody>
           </table>
         </div>
-        <div className="card-footer bg-white d-flex justify-content-between align-items-center">
+        <div className="card-footer bg-body-tertiary d-flex justify-content-between align-items-center">
           <span className="small text-secondary">
             Showing {orders.length} of {total} Orders (Page {page} of {totalPages})
           </span>

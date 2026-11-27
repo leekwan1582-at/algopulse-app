@@ -171,7 +171,7 @@ export default function DashboardPage() {
 
         <div className="col-lg-5">
           <div className="card shadow-sm">
-            <div className="card-header d-flex justify-content-between align-items-center bg-white">
+            <div className="card-header d-flex justify-content-between align-items-center bg-body-tertiary">
               <h2 className="h6 mb-0 fw-bold">Live Market Feed</h2>
               <button type="button" className="btn btn-sm btn-outline-secondary" onClick={handleRefreshFeed}>
                 <i className="bi bi-arrow-clockwise me-1" />
@@ -180,7 +180,7 @@ export default function DashboardPage() {
             </div>
             <div className="table-responsive">
               <table className="table table-hover mb-0">
-                <thead className="table-light">
+                <thead>
                   <tr>
                     <th>Pair</th>
                     <th>Price</th>

@@ -150,12 +150,12 @@ export default function BacktestStudioPage() {
           </div>
 
           <div className="card shadow-sm">
-            <div className="card-header bg-white fw-bold">
+            <div className="card-header bg-body-tertiary fw-bold">
               Historical Trade Logs ({result.trades.length})
             </div>
             <div className="table-responsive">
               <table className="table table-sm table-hover mb-0">
-                <thead className="table-light">
+                <thead>
                   <tr>
                     <th>Date</th>
                     <th>Type</th>
