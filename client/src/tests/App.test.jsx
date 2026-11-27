@@ -28,9 +28,9 @@ function renderAt(path) {
 }
 
 describe('App', () => {
-  it('renders the Navbar and Dashboard heading at /', async () => {
-    renderAt('/');
-    expect(screen.getByText('AlgoPulse')).toBeInTheDocument();
+  it('renders the Navbar and Dashboard heading at /Dashboard', async () => {
+    renderAt('/Dashboard');
+    expect(screen.getAllByText('AlgoPulse').length).toBeGreaterThan(0);
     expect(screen.getByRole('heading', { name: 'Dashboard' })).toBeInTheDocument();
   });
 

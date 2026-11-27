@@ -76,6 +76,22 @@ AlgoPulse solves these challenges by combining an intuitive React frontend with 
 
 > **"How might we provide retail traders with a responsive single-page application that enables them to visually configure automated strategies with predefined risk parameters and backtest them against historical data, so they can trade with confidence without managing backend infrastructure?"**
 
+### 2.6 Stakeholder Analysis and Collaboration
+
+| ***Stakeholder*** | ***Role / Relationship to Project*** | ***Key Requirements*** | ***Needs / Pain Points*** | ***Perspective on Problem / Solution*** |
+| --- | --- | --- | --- | --- |
+| **Retail Crypto Trader (Primary User)** | End-user who builds, backtests, and monitors automated strategies | Simple no-code strategy form, clear risk bounds (Stop-Loss / Take-Profit), fast backtesting, and transparent order logs | Existing bots require Python/Pine Script coding, lack safe risk guardrails, and make it hard to test ideas before risking real capital | Views AlgoPulse as a safe, visual workspace to configure, backtest, and paper-trade strategies without writing code |
+| **Trading Mentor / Educator** | Advisor or instructor reviewing student/novice trading strategies | Auditability of strategy parameters, reproducible backtest metrics (Win Rate, Max Drawdown), and exportable trade logs (CSV) | Hard to review students' ad-hoc spreadsheet trades or debug why a strategy lost money | Sees AlgoPulse's Backtest Studio and Order History CSV export as a structured way to evaluate and coach disciplined risk management |
+| **Platform Developer / Maintainer** | Capstone engineer building and maintaining the React, Express, and MariaDB stack | Clean separation of frontend/backend, strict client + server validation, relational data persistence, and automated unit tests | Maintaining consistency between UI validation, API rules, and database constraints without breaking existing trade logs | Views AlgoPulse as a modular full-stack PoC where Formik/Yup, Express validation, and MariaDB constraints enforce data integrity |
+| **Crypto Market Data Provider (External System)** | Upstream price feed source supplying BTC/USDT, ETH/USDT, and SOL/USDT ticker data | Reliable, low-latency REST/ticker responses and predictable rate limits | Rate-limiting or downtime breaks live price feeds and strategy evaluation | Requires the client/server to poll responsibly and fall back gracefully to cached/mocked feeds during PoC testing |
+
+**Stakeholder Collaboration Approach:**
+
+  * **Retail Traders:** Informal usability testing with 3 retail traders (see § 4.3) to refine form clarity, confirmation dialogs, and metric readability.
+  * **Trading Mentors / Educators:** Periodic walkthroughs of Backtest Studio metrics and exported CSV order logs to validate that risk parameters and P&L reporting align with real trading workflows.
+  * **Developers:** Shared coding standards (`AGENTS.md`), MariaDB schema/seed scripts, and Vitest unit tests keep the frontend, API, and database layers aligned.
+  * **Market Data Provider:** Respect published rate limits, poll at a fixed interval, and use mocked ticker data during PoC demos to avoid dependency on live-feed uptime.
+
 -----
 
 ## 3\. Learning Unit 2: From Insight to Impact (Solution Design & Storyboarding)
